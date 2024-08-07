@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ task }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ task }}</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Upload a file (CSV, SVG, or PNG):</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Landing Page</a>
+</body>
+</html>
